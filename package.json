@@ -35,7 +35,7 @@
     "grapheme-splitter": "^1.0.4",
     "hardhat-project": "git+https://github.com/chimera-defi/sharedtools-factory.git",
     "memoizee": "^0.4.15",
-    "next": "11.1.0",
+    "next": "10.2.0",
     "next-seo": "^4.26.0",
     "postcss": "^8.3.6",
     "react": "17.0.2",
