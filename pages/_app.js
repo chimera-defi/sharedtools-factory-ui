@@ -21,9 +21,10 @@ import	'tailwindcss/tailwind.css';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json());
 const useSecretCode = () => {
-	const secretCode = process.env.SECRET.split(',');
-	const success = useSecret(secretCode);
-	return success;
+	// const secretCode = process.env.SECRET.split(',');
+
+	// const success = useSecret(secretCode);
+	return false;
 };
 
 function	AppWrapper(props) {
