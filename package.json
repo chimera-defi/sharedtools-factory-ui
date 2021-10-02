@@ -10,7 +10,9 @@
     "start": "next start",
     "export": "next export",
     "lint": "eslint . --ext .js",
-    "lintfix": "eslint . --ext .js --fix"
+    "lintfix": "eslint . --ext .js --fix",
+    "fetchAutoUI": "curl https://raw.githubusercontent.com/chimera-defi/smartcontract-UI/master/bundle_scui_s.js -o ./public/smartcontract-app.js ",
+    "copyOverABIs": "cp -r node_modules/hardhat-project/data/abi/ utils/ABI/ && node utils/createABIExport.js"
   },
   "dependencies": {
     "@ethersproject/providers": "^5.4.4",
@@ -30,12 +32,14 @@
     "ethcall": "4.0.0",
     "ethers": "^5.4.5",
     "grapheme-splitter": "^1.0.4",
+    "hardhat-project": "git+https://github.com/chimera-defi/sharedtools-factory.git",
     "memoizee": "^0.4.15",
     "next": "11.1.0",
     "next-seo": "^4.26.0",
     "postcss": "^8.3.6",
     "react": "17.0.2",
     "react-dom": "^17.0.2",
+    "smartcontract-app": "git+https://github.com/chimera-defi/smartcontract-UI.git",
     "swr": "^0.5.6",
     "tailwindcss": "^2.2.7",
     "web3": "^1.5.2",
