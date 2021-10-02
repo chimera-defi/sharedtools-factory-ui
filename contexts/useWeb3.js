@@ -121,11 +121,16 @@ export const Web3ContextApp = ({children}) => {
 			const	injected = new InjectedConnector({
 				supportedChainIds: [
 					1, // ETH MAINNET
+					4, // ETH Rinkeby
+					5, // ETH Goerli
 					56, // BSC MAINNET
 					137, // MATIC MAINNET
 					250, // FANTOM MAINNET
 					1337, // MAJORNET,
 					42161, // ARBITRUM MAINNET
+					435, // metis
+					43114, // avalance c chain
+					43113, // avax fuji
 				]
 			});
 			activate(injected, undefined, true);
