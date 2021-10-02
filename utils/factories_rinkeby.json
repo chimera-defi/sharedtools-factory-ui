@@ -1,0 +1,83 @@
+
+{
+  "CloneFactory": {
+    "TITLE": "CloneFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "CloneFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xdD3FcC2fAAD6DfAC0426c3545CF335DD33D94A5B",
+    "CHAIN_ID": "4"
+  },
+  "ERC20MerkleDistributorWithClawbackFactory": {
+    "TITLE": "ERC20MerkleDistributorWithClawbackFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC20MerkleDistributorWithClawbackFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x5e143Fc7C3d1c28A4eCFF237EecFCa0124f2AA55",
+    "CHAIN_ID": "4"
+  },
+  "ERC20PresetFixedSupplyFactory": {
+    "TITLE": "ERC20PresetFixedSupplyFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC20PresetFixedSupplyFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x3942B96B76C23268c27BaD803A1A51578B32BF18",
+    "CHAIN_ID": "4"
+  },
+  "ERC721MerkleDistributorFactory": {
+    "TITLE": "ERC721MerkleDistributorFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC721MerkleDistributorFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x216A632b190C20E1a3AFf305563452d1F1624061",
+    "CHAIN_ID": "4"
+  },
+  "FarmingFactory": {
+    "TITLE": "FarmingFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "FarmingFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x7e6421378623D490082f979a105C186E3ab64996",
+    "CHAIN_ID": "4"
+  },
+  "MintableNFTSaleFactory": {
+    "TITLE": "MintableNFTSaleFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "MintableNFTSaleFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xEFe9cEdfc06c8FB45d161D7182d594D3b7b1A31B",
+    "CHAIN_ID": "4"
+  },
+  "PaymentSplitterFactory": {
+    "TITLE": "PaymentSplitterFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "PaymentSplitterFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x71788674b3Ac611BA7Fa42E1B7D8443674B94eDa",
+    "CHAIN_ID": "4"
+  },
+  "VoteEscrowFactory": {
+    "TITLE": "VoteEscrowFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "VoteEscrowFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xf4b34AD30F3810617B6f89aba21Cd33e0b9742fB",
+    "CHAIN_ID": "4"
+  },
+  "ERC721RaribleFactory": {
+    "TITLE": "ERC721RaribleFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC721RaribleFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xFb7035295a293041Ef8A2D5287A7eAec9C64917a",
+    "CHAIN_ID": 4
+  },
+  "ERC1155RaribleFactory": {
+    "TITLE": "ERC1155RaribleFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC1155RaribleFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xD910E04A13630d0Bd494f7AAff76D29153b711A8",
+    "CHAIN_ID": 4
+  }
+}

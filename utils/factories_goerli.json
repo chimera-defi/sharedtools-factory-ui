@@ -1,0 +1,50 @@
+{
+  "CloneFactory": {
+    "TITLE": "CloneFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "CloneFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x48bbbDb49Cb68F3CF27Ec404427a2CeFA087d280",
+    "CHAIN_ID": 5
+  },
+  "ERC20MerkleDistributorWithClawbackFactory": {
+    "TITLE": "ERC20MerkleDistributorWithClawbackFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC20MerkleDistributorWithClawbackFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x86cd997046c5312FFcaD917aD6EAd30b4734D242",
+    "CHAIN_ID": 5
+  },
+  "ERC721MerkleDistributorFactory": {
+    "TITLE": "ERC721MerkleDistributorFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC721MerkleDistributorFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xb69daAeA15AD90E684109F302d840A0cbE62bfF1",
+    "CHAIN_ID": 5
+  },
+  "FarmingFactory": {
+    "TITLE": "FarmingFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "FarmingFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x2f9fE5F3B0CD765151e1826F2002D6663e855a42",
+    "CHAIN_ID": 5
+  },
+  "MintableNFTSaleFactory": {
+    "TITLE": "MintableNFTSaleFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "MintableNFTSaleFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xcEA3c90DB417971d5D182DF31AEC5AE387602a45",
+    "CHAIN_ID": 5
+  },
+  "VoteEscrowFactory": {
+    "TITLE": "VoteEscrowFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "VoteEscrowFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xd4bEe00add16828aa1661c9FBfD2ebec1cEfaAd1",
+    "CHAIN_ID": 5
+  }
+}

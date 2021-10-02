@@ -1,0 +1,26 @@
+{
+  "VoteEscrowFactory": {
+    "TITLE": "VoteEscrowFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "VoteEscrowFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xeE5bd4b9C875BE3958b1255D181B8B3E978903b9",
+    "CHAIN_ID": 1
+  },
+  "ERC721RaribleFactory": {
+    "TITLE": "ERC721RaribleFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC721RaribleFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x6d9dd3547baf4c190ab89e0103c363feaf325eca",
+    "CHAIN_ID": 4
+  },
+  "ERC1155RaribleFactory": {
+    "TITLE": "ERC1155RaribleFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC1155RaribleFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x81243681078bEE8e251D02Ee6872b1EAa6DD982A",
+    "CHAIN_ID": 4
+  }
+}

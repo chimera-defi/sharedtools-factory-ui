@@ -6,21 +6,5 @@
     "VAULT_TYPE": "experimental",
     "ADDR": "0xeE5bd4b9C875BE3958b1255D181B8B3E978903b9",
     "CHAIN_ID": 1
-  },
-  "FarmingFactory": {
-    "TITLE": "FarmingFactory",
-    "LOGO": "🏆🚀",
-    "ABI": "FarmingFactory",
-    "VAULT_TYPE": "experimental",
-    "ADDR": "0xeE5bd4b9C875BE3958b1255D181B8B3E978903b9",
-    "CHAIN_ID": 1
-  },
-  "CloneFactory": {
-    "TITLE": "CloneFactory",
-    "LOGO": "🏆🚀",
-    "ABI": "CloneFactory",
-    "VAULT_TYPE": "experimental",
-    "ADDR": "0xeE5bd4b9C875BE3958b1255D181B8B3E978903b9",
-    "CHAIN_ID": 1
   }
 }
