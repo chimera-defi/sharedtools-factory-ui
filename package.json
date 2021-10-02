@@ -12,7 +12,8 @@
     "lint": "eslint . --ext .js",
     "lintfix": "eslint . --ext .js --fix",
     "fetchAutoUI": "curl https://raw.githubusercontent.com/chimera-defi/smartcontract-UI/master/bundle_scui_s.js -o ./public/smartcontract-app.js ",
-    "copyOverABIs": "cp -r node_modules/hardhat-project/data/abi/ utils/ABI/ && node utils/createABIExport.js"
+    "copyOverABIs": "cp -r node_modules/hardhat-project/data/abi/ utils/ABI/ && node utils/createABIExport.js",
+    "postinstall": "npm run-script fetchAutoUI && npm run-script copyOverABIs"
   },
   "dependencies": {
     "@ethersproject/providers": "^5.4.4",

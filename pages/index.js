@@ -5,7 +5,7 @@
 **	@Filename:				index.js
 ******************************************************************************/
 
-import React, { useState, useEffect, useRef, useCallback,useLayoutEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react';
 import Link from 'next/link';
 import useSWR from 'swr';
 import { ethers } from 'ethers';
@@ -13,7 +13,11 @@ import useWeb3 from 'contexts/useWeb3';
 import { formatAmount } from 'utils';
 import vaults from 'utils/vaults.json';
 import chains from 'utils/chains.json';
-import factories from 'utils/factories.json';
+import factories_mainnet from 'utils/factories_mainnet.json';
+import factories_rinkeby from 'utils/factories_rinkeby.json';
+import factories_goerli from 'utils/factories_goerli.json';
+
+
 import * as abis from "utils/ABIs.js";
 import GraphemeSplitter from 'grapheme-splitter';
 
@@ -25,9 +29,14 @@ const fetcher = (...args) => fetch(...args).then(res => res.json());
 function Index() {
 	const { provider, active, address, chainID } = useWeb3();
 	const [, set_nonce] = useState(0);
+	const [factories, set_factories] = useState({});
 	const [factoriesActive, set_factoriesActive] = useState([]);
 	const [activeFactory, set_activeFactory] = useState('');
 	const autoUIRef = useRef();
+
+	// if (chainID == 1) set_factories(factories_mainnet);
+	// if (chainID == 4) set_factories(factories_rinkeby);
+	// if (chainID == 5) set_factories(factories_goerli);
 
 	function createPayloadForAutoUI(name) {
 		let obj = factories[name];
@@ -52,6 +61,12 @@ function Index() {
 	}
 
 	useEffect(() => {
+		if (chainID == 1) set_factories(factories_mainnet);
+		if (chainID == 4) set_factories(factories_rinkeby);
+		if (chainID == 5) set_factories(factories_goerli);
+	}, [chainID]);
+
+	useEffect(() => {
 		if (!active) return;
 		if (!autoUIRef.current) return;
 		if (!window.displayContractUI) return;
@@ -67,7 +82,7 @@ function Index() {
 		const script = document.createElement('script');
 		script.src = '/smartcontract-app.js';
 		script.async = true;
-	
+
 		let scriptLoaded = function () {
 			if (!autoUIRef.current) return;
 			set_activeFactory('VoteEscrowFactory');
@@ -85,9 +100,10 @@ function Index() {
 		if (!active) {
 			return;
 		}
+
 		const _factories = [];
 		Object.entries(factories).reverse().map(([key, vault]) => {
-			if (vault.CHAIN_ID !== chainID && !(vault.CHAIN_ID === 1 && chainID === 1337)) {
+			if (vault.CHAIN_ID != chainID && !(vault.CHAIN_ID == 1 && chainID == 1337)) {
 				return;
 			}
 
@@ -112,40 +128,40 @@ function Index() {
 
 	return (
 		<section>
-			<div className={'mb-4'}>
- 			<h1 className={'text-3xl font-mono font-semibold text-ygray-900 leading-9 mb-6'}>{'Factory Experiments Registry'}</h1>
+			<div className={ 'mb-4' }>
+				<h1 className={ 'text-3xl font-mono font-semibold text-ygray-900 leading-9 mb-6' }>{ 'Factory Experiments Registry' }</h1>
 
 			</div>
-				<div className={ 'grid grid-cols-4 gap-2' }>
-					<div className={ 'col-span-1' }>
+			<div className={ 'grid grid-cols-4 gap-2' }>
+				<div className={ 'col-span-1' }>
 
 
-						 <ul>
-							{ factoriesActive?.map((factory) => (
-								<li key={ factory.TITLE } className={ 'cursor-pointer' }>
-								<button href={'#'} onClick={(_) => set_activeFactory(factory.TITLE) }>
-										<div className={ 'my-4 flex flex-row items-center' }>
-											<span className={ 'flex flex-row items-center' }>
-												{/* {
+					<ul>
+						{ factoriesActive?.map((factory) => (
+							<li key={ factory.TITLE } className={ 'cursor-pointer' }>
+								<button href={ '#' } onClick={ (_) => set_activeFactory(factory.TITLE) }>
+									<div className={ 'my-4 flex flex-row items-center' }>
+										<span className={ 'flex flex-row items-center' }>
+											{/* {
 													factory.LOGO_ARR.map((letter, index) => (
 														<div className={ index === 0 ? 'text-left w-5' : 'text-right w-5' } key={ `${factory.VAULT_SLUG}${index}${letter}` }>{ letter }</div>
 													))
 												} */}
-											</span>
-											<span className={ 'ml-4 text-base font-normal text-gray-700 font-mono dashed-underline-gray cursor-pointer' }>
-												{ factory.TITLE }
-											</span>
-										</div>
-									</button>
-								</li>
-							)) }
-						</ul>
-					</div>
+										</span>
+										<span className={ 'ml-4 text-base font-normal text-gray-700 font-mono dashed-underline-gray cursor-pointer' }>
+											{ factory.TITLE }
+										</span>
+									</div>
+								</button>
+							</li>
+						)) }
+					</ul>
+				</div>
 
 				<div className={ 'col-span-3 gap-2 mt-3' }>
-					<div ref={autoUIRef} />
+					<div ref={ autoUIRef } />
 				</div>
-				</div>
+			</div>
 		</section>
 	);
 }

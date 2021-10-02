@@ -6,6 +6,20 @@
     "coin": "ETH",
     "block_explorer": "https://etherscan.io"
   },
+  "4": {
+    "chainID": "4",
+    "name": "ETH Rinkeby",
+    "displayName": "Ethereum",
+    "coin": "ETH",
+    "block_explorer": "https://rinkeby.etherscan.io"
+  },
+  "5": {
+    "chainID": "5",
+    "name": "ETH Goerli",
+    "displayName": "Ethereum",
+    "coin": "ETH",
+    "block_explorer": "https://goerli.etherscan.io"
+  },
   "250": {
     "chainID": "250",
     "name": "FTM Mainnet",
