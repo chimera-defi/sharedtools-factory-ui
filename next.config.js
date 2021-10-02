@@ -11,6 +11,11 @@ module.exports = ({
 	plugins: [
 		new Dotenv()
 	],
+	eslint: {
+		// Warning: This allows production builds to successfully complete even if
+		// your project has ESLint errors.
+		ignoreDuringBuilds: true,
+	},
 	env: {
 		ALCHEMY_KEY: process.env.ALCHEMY_KEY,
 		ALCHEMY_KEY_POLYGON: process.env.ALCHEMY_KEY_POLYGON,

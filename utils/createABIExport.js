@@ -1,4 +1,5 @@
 const fs = require('fs');
+
 let list, names, imports, exportStr, result;
 
 list = fs.readdirSync('utils/ABI');
