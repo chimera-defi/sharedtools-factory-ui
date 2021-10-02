@@ -3,6 +3,7 @@ const fs = require('fs');
 let list, names, imports, exportStr, result;
 
 list = fs.readdirSync('utils/ABI');
+list = list.filter(f => f.match('.json'));
 names = list.map(file => file.split('.')[0]);
 
 imports = list.map((file, i) => `import ${names[i]} from 'utils/ABI/${file}';`);
