@@ -1,0 +1,29 @@
+{
+  "CloneFactory": {
+    "TITLE": "CloneFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "CloneFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xc1C531d7b9A2F99b9C957cDd5D385A7d780d5f6f",
+    "CHAIN_ID": "435",
+    "args": []
+  },
+  "MintableNFTSaleFactory": {
+    "TITLE": "MintableNFTSaleFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "MintableNFTSaleFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xC390303D04dC060e4458B72c8F7acD014D57E9ea",
+    "CHAIN_ID": "435",
+    "args": []
+  },
+  "VoteEscrowFactory": {
+    "TITLE": "VoteEscrowFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "VoteEscrowFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xf13b66Fb0bc1BC35AB89b7647A4ea0E608aA799c",
+    "CHAIN_ID": "435",
+    "args": []
+  }
+}

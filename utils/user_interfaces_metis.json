@@ -1,0 +1,18 @@
+{
+  "MintableNFTSale": {
+    "TITLE": "MintableNFTSale",
+    "LOGO": "🏆🚀",
+    "ABI": "MintableNFTSale",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "435",
+    "args": []
+  },
+  "VoteEscrow": {
+    "TITLE": "VoteEscrow",
+    "LOGO": "🏆🚀",
+    "ABI": "VoteEscrow",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "435",
+    "args": []
+  }
+}

@@ -20,6 +20,13 @@
     "coin": "ETH",
     "block_explorer": "https://goerli.etherscan.io"
   },
+  "435": {
+    "chainID": "435",
+    "name": "Metis testnet",
+    "displayName": "Metis",
+    "coin": "METIS",
+    "block_explorer": "https://beta-explorer.metis.io"
+  },
   "250": {
     "chainID": "250",
     "name": "FTM Mainnet",

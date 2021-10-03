@@ -16,6 +16,9 @@ import chains from 'utils/chains.json';
 import factories_mainnet from 'utils/factories_mainnet.json';
 import factories_rinkeby from 'utils/factories_rinkeby.json';
 import factories_goerli from 'utils/factories_goerli.json';
+import factories_metis from 'utils/factories_metis.json';
+
+import user_interfaces_metis from 'utils/user_interfaces_metis.json';
 
 
 import * as abis from "utils/ABIs.js";
@@ -30,6 +33,10 @@ function Index() {
 	const { provider, active, address, chainID } = useWeb3();
 	const [, set_nonce] = useState(0);
 	const [factories, set_factories] = useState({});
+
+	const [userInterfaces, set_userInterfaces] = useState({});
+	const [UIsActive, set_UIsActive] = useState([]);
+
 	const [factoriesActive, set_factoriesActive] = useState([]);
 	const [activeFactory, set_activeFactory] = useState('');
 	const autoUIRef = useRef();
@@ -40,8 +47,9 @@ function Index() {
 
 	function createPayloadForAutoUI(name) {
 		let obj = factories[name];
+		if (!obj) obj =  userInterfaces[name];
 		let abi = abis[name];
-		let addr = obj.ADDR;
+		let addr = obj?.ADDR;
 		return [{
 			name: name,
 			address: addr,
@@ -64,6 +72,10 @@ function Index() {
 		if (chainID == 1) set_factories(factories_mainnet);
 		if (chainID == 4) set_factories(factories_rinkeby);
 		if (chainID == 5) set_factories(factories_goerli);
+		if (chainID == 435) {
+			set_factories(factories_metis);
+			set_userInterfaces(user_interfaces_metis);
+		}
 	}, [chainID]);
 
 	useEffect(() => {
@@ -101,7 +113,18 @@ function Index() {
 			return;
 		}
 
+		const _uis = [];
+		Object.entries(userInterfaces).reverse().map(([key, vault]) => {
+			if (vault.CHAIN_ID != chainID && !(vault.CHAIN_ID == 1 && chainID == 1337)) {
+				return;
+			}
+			_uis.push(vault);
+		});
+		set_UIsActive(_uis);
+
+
 		const _factories = [];
+
 		Object.entries(factories).reverse().map(([key, vault]) => {
 			if (vault.CHAIN_ID != chainID && !(vault.CHAIN_ID == 1 && chainID == 1337)) {
 				return;
@@ -138,6 +161,31 @@ function Index() {
 
 					<ul>
 						{ factoriesActive?.map((factory) => (
+							<li key={ factory.TITLE } className={ 'cursor-pointer' }>
+								<button href={ '#' } onClick={ (_) => set_activeFactory(factory.TITLE) }>
+									<div className={ 'my-4 flex flex-row items-center' }>
+										<span className={ 'flex flex-row items-center' }>
+											{/* {
+													factory.LOGO_ARR.map((letter, index) => (
+														<div className={ index === 0 ? 'text-left w-5' : 'text-right w-5' } key={ `${factory.VAULT_SLUG}${index}${letter}` }>{ letter }</div>
+													))
+												} */}
+										</span>
+										<span className={ 'ml-4 text-base font-normal text-gray-700 font-mono dashed-underline-gray cursor-pointer' }>
+											{ factory.TITLE }
+										</span>
+									</div>
+								</button>
+							</li>
+						)) }
+					</ul>
+
+					<hr className={'border-solid'} />
+					<h1 className={ 'text-1xl font-mono font-semibold text-ygray-900 leading-9 mb-6' }>{ 'Connectable UIs' }</h1>
+					<hr className={'border-solid'} />
+
+					<ul>
+						{ UIsActive?.map((factory) => (
 							<li key={ factory.TITLE } className={ 'cursor-pointer' }>
 								<button href={ '#' } onClick={ (_) => set_activeFactory(factory.TITLE) }>
 									<div className={ 'my-4 flex flex-row items-center' }>
