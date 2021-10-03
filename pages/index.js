@@ -19,6 +19,7 @@ import factories_goerli from 'utils/factories_goerli.json';
 import factories_metis from 'utils/factories_metis.json';
 
 import user_interfaces_metis from 'utils/user_interfaces_metis.json';
+import user_interfaces_rinkeby from 'utils/user_interfaces_rinkeby.json';
 
 
 import * as abis from "utils/ABIs.js";
@@ -70,7 +71,10 @@ function Index() {
 
 	useEffect(() => {
 		if (chainID == 1) set_factories(factories_mainnet);
-		if (chainID == 4) set_factories(factories_rinkeby);
+		if (chainID == 4) {
+			set_factories(factories_rinkeby);
+			set_userInterfaces(user_interfaces_rinkeby);
+		}
 		if (chainID == 5) set_factories(factories_goerli);
 		if (chainID == 435) {
 			set_factories(factories_metis);

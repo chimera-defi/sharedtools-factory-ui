@@ -1,0 +1,73 @@
+
+{
+  "ERC20MerkleDistributorWithClawback": {
+    "TITLE": "ERC20MerkleDistributorWithClawback",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC20MerkleDistributorWithClawback",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "4"
+  },
+  "ERC20PresetFixedSupply": {
+    "TITLE": "ERC20PresetFixedSupply",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC20PresetFixedSupply",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "4"
+  },
+  "ERC721MerkleDistributor": {
+    "TITLE": "ERC721MerkleDistributor",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC721MerkleDistributor",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "4"
+  },
+  "MasterChef": {
+    "TITLE": "MasterChef",
+    "LOGO": "🏆🚀",
+    "ABI": "MasterChef",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "4"
+  },
+  "FundDistributor": {
+    "TITLE": "FundDistributor",
+    "LOGO": "🏆🚀",
+    "ABI": "FundDistributor",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "4"
+  },
+  "MintableNFTSale": {
+    "TITLE": "MintableNFTSale",
+    "LOGO": "🏆🚀",
+    "ABI": "MintableNFTSale",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "4"
+  },
+  "PaymentSplitter": {
+    "TITLE": "PaymentSplitter",
+    "LOGO": "🏆🚀",
+    "ABI": "PaymentSplitter",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "4"
+  },
+  "VoteEscrow": {
+    "TITLE": "VoteEscrow",
+    "LOGO": "🏆🚀",
+    "ABI": "VoteEscrow",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "4"
+  },
+  "ERC721Rarible": {
+    "TITLE": "ERC721Rarible",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC721Rarible",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": 4
+  },
+  "ERC1155Rarible": {
+    "TITLE": "ERC1155Rarible",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC1155Rarible",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": 4
+  }
+}

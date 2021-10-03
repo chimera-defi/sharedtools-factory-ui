@@ -1,8 +1,8 @@
 {
-  "MintableNFTSale": {
-    "TITLE": "MintableNFTSale",
+  "MintableNFTSaleMetis": {
+    "TITLE": "MintableNFTSaleMetis",
     "LOGO": "🏆🚀",
-    "ABI": "MintableNFTSale",
+    "ABI": "MintableNFTSaleMetis",
     "VAULT_TYPE": "experimental",
     "CHAIN_ID": "435",
     "args": []
