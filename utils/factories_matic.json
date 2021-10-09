@@ -1,0 +1,66 @@
+{
+  "CloneFactory": {
+    "TITLE": "CloneFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "CloneFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x1598e44CD5fa897Bd0062249e1B7eF78dDDdd44e",
+    "CHAIN_ID": "137"
+  },
+  "ERC20MerkleDistributorWithClawbackFactory": {
+    "TITLE": "ERC20MerkleDistributorWithClawbackFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC20MerkleDistributorWithClawbackFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xFF005b037789307d64a84896Bc38d70AEb831eBE",
+    "CHAIN_ID": "137"
+  },
+  "ERC20PresetFixedSupplyFactory": {
+    "TITLE": "ERC20PresetFixedSupplyFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC20PresetFixedSupplyFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x8C54b4fC7beEc01876079Fb159DEB15620d4b7B9",
+    "CHAIN_ID": "137"
+  },
+  "ERC721MerkleDistributorFactory": {
+    "TITLE": "ERC721MerkleDistributorFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC721MerkleDistributorFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x020C8B0CC02256297c087c275F6F2Ac172a1EB12",
+    "CHAIN_ID": "137"
+  },
+  "FarmingFactory": {
+    "TITLE": "FarmingFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "FarmingFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x77951b37af3d440f4DBB72a6a470382696f61097",
+    "CHAIN_ID": "137"
+  },
+  "MintableNFTSaleFactory": {
+    "TITLE": "MintableNFTSaleFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "MintableNFTSaleFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xe63faeBEb705AecCc893EFf4343b3b6CCb5B44D4",
+    "CHAIN_ID": "137"
+  },
+  "PaymentSplitterFactory": {
+    "TITLE": "PaymentSplitterFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "PaymentSplitterFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xB355f388d6c824BFa4BA62b876f59B272d42dC2F",
+    "CHAIN_ID": "137"
+  },
+  "VoteEscrowFactory": {
+    "TITLE": "VoteEscrowFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "VoteEscrowFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xb1E39912a7B6bd3FdC21da6c5a038E436AaF558a",
+    "CHAIN_ID": "137"
+  }
+}

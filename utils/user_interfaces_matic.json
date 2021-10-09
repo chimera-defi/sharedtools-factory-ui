@@ -1,0 +1,44 @@
+{
+  "ERC20PresetFixedSupply": {
+    "TITLE": "ERC20PresetFixedSupply",
+    "LOGO": "🏆🚀",
+    "ABI": "ERC20PresetFixedSupply",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "137"
+  },
+  "FundDistributor": {
+    "TITLE": "FundDistributor",
+    "LOGO": "🏆🚀",
+    "ABI": "FundDistributor",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "137"
+  },
+  "PaymentSplitter": {
+    "TITLE": "PaymentSplitter",
+    "LOGO": "🏆🚀",
+    "ABI": "PaymentSplitter",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "137"
+  },
+  "MasterChef": {
+    "TITLE": "MasterChef",
+    "LOGO": "🏆🚀",
+    "ABI": "MasterChef",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "137"
+  },
+  "MintableNFTSale": {
+    "TITLE": "MintableNFTSale",
+    "LOGO": "🏆🚀",
+    "ABI": "MintableNFTSale",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "137"
+  },
+  "VoteEscrow": {
+    "TITLE": "VoteEscrow",
+    "LOGO": "🏆🚀",
+    "ABI": "VoteEscrow",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "137"
+  }
+}

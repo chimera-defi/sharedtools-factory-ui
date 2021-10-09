@@ -16,10 +16,11 @@ import chains from 'utils/chains.json';
 import factories_mainnet from 'utils/factories_mainnet.json';
 import factories_rinkeby from 'utils/factories_rinkeby.json';
 import factories_goerli from 'utils/factories_goerli.json';
-import factories_metis from 'utils/factories_metis.json';
+import factories_matic from 'utils/factories_matic.json';
 
 import user_interfaces_metis from 'utils/user_interfaces_metis.json';
 import user_interfaces_rinkeby from 'utils/user_interfaces_rinkeby.json';
+import user_interfaces_matic from 'utils/user_interfaces_matic.json';
 
 
 import * as abis from "utils/ABIs.js";
@@ -79,6 +80,10 @@ function Index() {
 		if (chainID == 435) {
 			set_factories(factories_metis);
 			set_userInterfaces(user_interfaces_metis);
+		}
+		if (chainID == 137) {
+			set_factories(factories_matic);
+			set_userInterfaces(user_interfaces_matic);
 		}
 	}, [chainID]);
 
