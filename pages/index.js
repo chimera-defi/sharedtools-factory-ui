@@ -16,6 +16,7 @@ import chains from 'utils/chains.json';
 import factories_mainnet from 'utils/factories_mainnet.json';
 import factories_rinkeby from 'utils/factories_rinkeby.json';
 import factories_goerli from 'utils/factories_goerli.json';
+import factories_metis from 'utils/factories_metis.json';
 import factories_matic from 'utils/factories_matic.json';
 
 import user_interfaces_metis from 'utils/user_interfaces_metis.json';
