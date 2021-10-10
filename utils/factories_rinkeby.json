@@ -1,4 +1,3 @@
-
 {
   "CloneFactory": {
     "TITLE": "CloneFactory",
@@ -79,5 +78,21 @@
     "VAULT_TYPE": "experimental",
     "ADDR": "0xD910E04A13630d0Bd494f7AAff76D29153b711A8",
     "CHAIN_ID": 4
+  },
+  "StableswapFactory": {
+    "TITLE": "StableswapFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "StableswapFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x921c51c6096e99f29c25559272342FF31B0240ea",
+    "CHAIN_ID": "4"
+  },
+  "PaymentSplitterERC20Factory": {
+    "TITLE": "PaymentSplitterERC20Factory",
+    "LOGO": "🏆🚀",
+    "ABI": "PaymentSplitterERC20Factory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x0a2395cA473c3c756738905574F71A20A19e8dB2",
+    "CHAIN_ID": "4"
   }
 }

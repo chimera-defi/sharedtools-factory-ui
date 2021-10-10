@@ -5,12 +5,12 @@
 **	@Filename:				index.js
 ******************************************************************************/
 
-import React, { useState, useEffect, useRef, useCallback, useLayoutEffect } from 'react';
+import React, {useState, useEffect, useRef, useCallback, useLayoutEffect} from 'react';
 import Link from 'next/link';
 import useSWR from 'swr';
-import { ethers } from 'ethers';
+import {ethers} from 'ethers';
 import useWeb3 from 'contexts/useWeb3';
-import { formatAmount } from 'utils';
+import {formatAmount} from 'utils';
 import vaults from 'utils/vaults.json';
 import chains from 'utils/chains.json';
 import factories_mainnet from 'utils/factories_mainnet.json';
@@ -24,7 +24,7 @@ import user_interfaces_rinkeby from 'utils/user_interfaces_rinkeby.json';
 import user_interfaces_matic from 'utils/user_interfaces_matic.json';
 
 
-import * as abis from "utils/ABIs.js";
+import * as abis from 'utils/ABIs.js';
 import GraphemeSplitter from 'grapheme-splitter';
 
 const splitter = new GraphemeSplitter();
@@ -33,7 +33,7 @@ const fetcher = (...args) => fetch(...args).then(res => res.json());
 
 
 function Index() {
-	const { provider, active, address, chainID } = useWeb3();
+	const {provider, active, address, chainID} = useWeb3();
 	const [, set_nonce] = useState(0);
 	const [factories, set_factories] = useState({});
 
@@ -44,13 +44,9 @@ function Index() {
 	const [activeFactory, set_activeFactory] = useState('');
 	const autoUIRef = useRef();
 
-	// if (chainID == 1) set_factories(factories_mainnet);
-	// if (chainID == 4) set_factories(factories_rinkeby);
-	// if (chainID == 5) set_factories(factories_goerli);
-
 	function createPayloadForAutoUI(name) {
 		let obj = factories[name];
-		if (!obj) obj =  userInterfaces[name];
+		if (!obj) obj = userInterfaces[name];
 		let abi = abis[name];
 		let addr = obj?.ADDR;
 		return [{
@@ -61,7 +57,7 @@ function Index() {
 	}
 	function setAutoUI() {
 		let data = createPayloadForAutoUI(activeFactory);
-		let { node, cb } = window.displayContractUI(data);
+		let {node, cb} = window.displayContractUI(data);
 		if (autoUIRef.current.firstChild) {
 			autoUIRef.current.replaceChild(node, autoUIRef.current.firstChild);
 		} else {
@@ -108,13 +104,13 @@ function Index() {
 		let scriptLoaded = function () {
 			if (!autoUIRef.current) return;
 			set_activeFactory('VoteEscrowFactory');
-		}
+		};
 		script.onload = () => scriptLoaded();
 		document.body.appendChild(script);
 
 		return () => {
 			document.body.removeChild(script);
-		}
+		};
 	}, [chainID, active]);
 
 
@@ -130,7 +126,7 @@ function Index() {
 			}
 			_uis.push(vault);
 		});
-		set_UIsActive(_uis);
+		set_UIsActive(sortBy(_uis, 'TITLE'));
 
 
 		const _factories = [];
@@ -140,14 +136,12 @@ function Index() {
 				return;
 			}
 
-			// const splitted = splitter.splitGraphemes(vault.LOGO);
-			// vault.LOGO_ARR = ([splitted[0], `${splitted.slice(1).join('')}`]);
 			vault.VAULT_SLUG = key;
 			_factories.push(vault);
 
 			set_nonce(n => n + 1);
 		});
-		set_factoriesActive(sortBy(_factories, 'ORDER'));
+		set_factoriesActive(sortBy(_factories, 'TITLE'));
 
 	}, [chainID, active]);
 
@@ -190,9 +184,9 @@ function Index() {
 						)) }
 					</ul>
 
-					<hr className={'border-solid'} />
+					<hr className={ 'border-solid' } />
 					<h1 className={ 'text-1xl font-mono font-semibold text-ygray-900 leading-9 mb-6' }>{ 'Connectable UIs' }</h1>
-					<hr className={'border-solid'} />
+					<hr className={ 'border-solid' } />
 
 					<ul>
 						{ UIsActive?.map((factory) => (

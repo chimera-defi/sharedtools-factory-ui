@@ -40,5 +40,21 @@
     "ABI": "VoteEscrow",
     "VAULT_TYPE": "experimental",
     "CHAIN_ID": "137"
+  },
+  "FeeDistributor": {
+    "TITLE": "FeeDistributor",
+    "LOGO": "🏆🚀",
+    "ABI": "FeeDistributor",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x706B8856e0e081c29e3Ba5c8bAA7D72D8E1d7CcC",
+    "CHAIN_ID": "137"
+  },
+  "IronSwapRouter": {
+    "TITLE": "IronSwapRouter",
+    "LOGO": "🏆🚀",
+    "ABI": "IronSwapRouter",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x5e2eA12FF07d063b4B39d67F7F624De45A546eea",
+    "CHAIN_ID": "137"
   }
 }

@@ -62,5 +62,13 @@
     "VAULT_TYPE": "experimental",
     "ADDR": "0xb1E39912a7B6bd3FdC21da6c5a038E436AaF558a",
     "CHAIN_ID": "137"
+  },
+  "StableswapFactory": {
+    "TITLE": "StableswapFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "StableswapFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x4B67423C13d07386Ba26B943b03F4d82a16a4b30",
+    "CHAIN_ID": "137"
   }
 }

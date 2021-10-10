@@ -49,6 +49,13 @@
     "VAULT_TYPE": "experimental",
     "CHAIN_ID": "4"
   },
+  "PaymentSplitterERC20": {
+    "TITLE": "PaymentSplitterERC20",
+    "LOGO": "🏆🚀",
+    "ABI": "PaymentSplitterERC20",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "4"
+  },
   "VoteEscrow": {
     "TITLE": "VoteEscrow",
     "LOGO": "🏆🚀",
@@ -69,5 +76,28 @@
     "ABI": "ERC1155Rarible",
     "VAULT_TYPE": "experimental",
     "CHAIN_ID": 4
+  },
+  "IronSwapLib": {
+    "TITLE": "IronSwapLib",
+    "LOGO": "🏆🚀",
+    "ABI": "IronSwapLib",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xAA2EB2c5aE9339D66E3F366a504DF72BB86f06Da",
+    "CHAIN_ID": "4"
+  },
+  "FeeDistributor": {
+    "TITLE": "FeeDistributor",
+    "LOGO": "🏆🚀",
+    "ABI": "FeeDistributor",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "4"
+  },
+  "IronSwapRouter": {
+    "TITLE": "IronSwapRouter",
+    "LOGO": "🏆🚀",
+    "ABI": "IronSwapRouter",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xbca3B7B87dCB15f0efa66136Bc0E4684a3e5da4d",
+    "CHAIN_ID": "4"
   }
 }
