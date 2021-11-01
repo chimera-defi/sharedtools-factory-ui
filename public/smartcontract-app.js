@@ -19615,7 +19615,7 @@ const inputInteger = require("input-integer")
 const inputBoolean = require("input-boolean")
 const inputString = require("input-string")
 const inputByte = require("input-byte")
-// const inputPayable = require("input-payable")
+const inputPayable = require("input-payable")
 
     function generateInputContainer (field) {
       var theme = { classes: css, colors}
@@ -19711,7 +19711,7 @@ module.exports = {
   getConstructorInput: getConstructorInput
 }
 
-},{"./css":80,"bel":3,"input-address":38,"input-array":39,"input-boolean":40,"input-byte":53,"input-integer":54,"input-string":55,"theme":91}],80:[function(require,module,exports){
+},{"./css":80,"bel":3,"input-address":38,"input-array":39,"input-boolean":40,"input-byte":53,"input-integer":54,"input-payable":86,"input-string":55,"theme":91}],80:[function(require,module,exports){
 const csjs = require("csjs-inject")
 const colors = require('theme')
 const bel = require("bel")
@@ -20844,7 +20844,7 @@ function modularDisplayContractUI(result) {
    * 1. name - contract name
    * 2. address - address the contract is deployed to
    * Extra:
-   * 1. Specify `excludedFunctions` to exclude printing some functions to UI
+   * 1. Specify `excludedFunctions` to exclude printing some functions to UI. Or `includedFunctions` to only include those fns
    */
   var opts = {
     metadata: {
@@ -20861,10 +20861,14 @@ function modularDisplayContractUI(result) {
     }
   }
 
-  // filter excluded functions from uI
+  // filter excluded/included functions from UI
   let excludedFunctions = result[0].excludedFunctions;
   if (excludedFunctions && excludedFunctions.length > 0) {
     opts.metadata = opts.metadata.filter(x => excludedFunctions.indexOf(x.name) == -1);
+  }
+  let includedFunctions = result[0].includedFunctions;
+  if (includedFunctions && includedFunctions.length > 0) {
+    opts.metadata = opts.metadata.filter(x => includedFunctions.indexOf(x.name) !== -1);
   }
 
   var solcMetadata = opts.metadata

@@ -39,12 +39,12 @@
     "ADDR": "0x77951b37af3d440f4DBB72a6a470382696f61097",
     "CHAIN_ID": "137"
   },
-  "MintableNFTSaleFactory": {
-    "TITLE": "MintableNFTSaleFactory",
+  "MintableNFTSale": {
+    "TITLE": "MintableNFTSale",
     "LOGO": "🏆🚀",
-    "ABI": "MintableNFTSaleFactory",
+    "ABI": "MintableNFTSale",
     "VAULT_TYPE": "experimental",
-    "ADDR": "0xe63faeBEb705AecCc893EFf4343b3b6CCb5B44D4",
+    "ADDR": "0x0487FFB08Eaf5D5d4B4d84d833B303DAef5571B1",
     "CHAIN_ID": "137"
   },
   "PaymentSplitterFactory": {

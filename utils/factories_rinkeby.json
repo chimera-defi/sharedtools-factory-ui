@@ -39,14 +39,6 @@
     "ADDR": "0x7e6421378623D490082f979a105C186E3ab64996",
     "CHAIN_ID": "4"
   },
-  "MintableNFTSaleFactory": {
-    "TITLE": "MintableNFTSaleFactory",
-    "LOGO": "🏆🚀",
-    "ABI": "MintableNFTSaleFactory",
-    "VAULT_TYPE": "experimental",
-    "ADDR": "0xEFe9cEdfc06c8FB45d161D7182d594D3b7b1A31B",
-    "CHAIN_ID": "4"
-  },
   "PaymentSplitterFactory": {
     "TITLE": "PaymentSplitterFactory",
     "LOGO": "🏆🚀",
@@ -93,6 +85,14 @@
     "ABI": "PaymentSplitterERC20Factory",
     "VAULT_TYPE": "experimental",
     "ADDR": "0x0a2395cA473c3c756738905574F71A20A19e8dB2",
+    "CHAIN_ID": "4"
+  },
+  "MintableNFTSaleFactory": {
+    "TITLE": "MintableNFTSaleFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "MintableNFTSaleFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0xAa5893679788E1FAE460Ae6A96791a712FDC474F",
     "CHAIN_ID": "4"
   }
 }
