@@ -13,6 +13,8 @@ import useWeb3 from 'contexts/useWeb3';
 import {formatAmount} from 'utils';
 import vaults from 'utils/vaults.json';
 import chains from 'utils/chains.json';
+
+
 import factories_mainnet from 'utils/factories_mainnet.json';
 import factories_rinkeby from 'utils/factories_rinkeby.json';
 import factories_goerli from 'utils/factories_goerli.json';
@@ -44,11 +46,19 @@ function Index() {
 	const [activeFactory, set_activeFactory] = useState('');
 	const autoUIRef = useRef();
 
-	function createPayloadForAutoUI(name) {
+	function getSettings(name) {
 		let obj = factories[name];
 		if (!obj) obj = userInterfaces[name];
+		return obj;
+	}
+
+	function createPayloadForAutoUI(name) {
+		let obj = getSettings(name);
 		let abi = abis[name];
 		let addr = obj?.ADDR;
+		if (obj.addTwoTokenApprovalUI) addTwoTokenApprovalUI(addr, name);
+		if (obj.addApprovalUI && obj.tokenAddress) addApprovalUI(obj.tokenAddress);
+
 		return [{
 			name: name,
 			address: addr,
@@ -64,6 +74,30 @@ function Index() {
 			autoUIRef.current.appendChild(node);
 		}
 
+		cb();
+	}
+
+	async function addTwoTokenApprovalUI(baseContractAddr, baseContractName) {
+		let baseContractABI = abis[baseContractName];
+		let baseCtrct = new ethers.Contract(baseContractAddr, baseContractABI, provider);
+
+		let tokenA = await baseCtrct.tokenA();
+		let tokenB = await baseCtrct.tokenB();
+		addApprovalUI(tokenA);
+		addApprovalUI(tokenB);
+	}
+
+	function addApprovalUI(tokenAddr) {
+		let abi = abis.erc20;
+		let name = 'TokenApproval';
+		let payload = [{
+			name: name,
+			address: tokenAddr,
+			abi: abi,
+			includedFunctions: ['approve']
+		}];
+		let {node, cb} = window.displayContractUI(payload);
+		autoUIRef.current.appendChild(node);
 		cb();
 	}
 
@@ -91,6 +125,7 @@ function Index() {
 		if (activeFactory.length == 0) return;
 
 		setAutoUI();
+
 	}, [activeFactory]);
 
 	useEffect(() => {
@@ -212,6 +247,7 @@ function Index() {
 
 				<div className={ 'col-span-3 gap-2 mt-3' }>
 					<div ref={ autoUIRef } />
+
 				</div>
 			</div>
 		</section>
