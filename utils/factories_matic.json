@@ -70,5 +70,13 @@
     "VAULT_TYPE": "experimental",
     "ADDR": "0x4B67423C13d07386Ba26B943b03F4d82a16a4b30",
     "CHAIN_ID": "137"
+  },
+  "FrankiesTWAMMFactory": {
+    "TITLE": "FrankiesTWAMMFactory",
+    "LOGO": "🏆🚀",
+    "ABI": "FrankiesTWAMMFactory",
+    "VAULT_TYPE": "experimental",
+    "ADDR": "0x9b874C8adFf05CE352e8e5a3F0abDf8694A0f600",
+    "CHAIN_ID": "137"
   }
 }

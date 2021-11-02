@@ -1111,6 +1111,16 @@
         "internalType": "address",
         "name": "_paymentsSplitter",
         "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "_forceConstantURI",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "_extension",
+        "type": "string"
       }
     ],
     "name": "updateParams",

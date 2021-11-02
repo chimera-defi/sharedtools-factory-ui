@@ -56,5 +56,12 @@
     "VAULT_TYPE": "experimental",
     "ADDR": "0x5e2eA12FF07d063b4B39d67F7F624De45A546eea",
     "CHAIN_ID": "137"
+  },
+  "TWAMM": {
+    "TITLE": "TWAMM",
+    "LOGO": "🏆🚀",
+    "ABI": "TWAMM",
+    "VAULT_TYPE": "experimental",
+    "CHAIN_ID": "137"
   }
 }

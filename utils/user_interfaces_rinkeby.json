@@ -1,4 +1,3 @@
-
 {
   "ERC20MerkleDistributorWithClawback": {
     "TITLE": "ERC20MerkleDistributorWithClawback",
@@ -98,6 +97,13 @@
     "ABI": "IronSwapRouter",
     "VAULT_TYPE": "experimental",
     "ADDR": "0xbca3B7B87dCB15f0efa66136Bc0E4684a3e5da4d",
+    "CHAIN_ID": "4"
+  },
+  "TWAMM": {
+    "TITLE": "TWAMM",
+    "LOGO": "🏆🚀",
+    "ABI": "TWAMM",
+    "VAULT_TYPE": "experimental",
     "CHAIN_ID": "4"
   }
 }
